@@ -1,0 +1,176 @@
+body {
+    /*
+    background-image: url(./assets/bg-mobile.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    */
+
+    /*background agrupado*/
+    background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
+}
+
+
+/* reset geral do CSS */
+* {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
+
+/* tema escuro (padrão) */
+:root {
+    --text-color: #fff; /* cor do texto */
+    --bg-url: url(./assets/bg-mobile.jpg); /* imagem de fundo */
+    --stroke-color: rgba(255, 255, 255, 0.5); /* cor da borda com transparência */
+    --surface-color: rgba(255, 255, 255, 0.1); /* cor de superfície com transparência */
+    --highlight-color: rgba(255, 255, 255, 0.2); /* cor de destaque com transparência */
+    --switch-bg-url: url(./assets/moon-stars.svg); /* ícone do botão de troca de tema */
+}
+
+/* tema claro */
+.light {
+    --text-color: #000; /* cor do texto */
+    --bg-url: url(./assets/bg-mobile-light.jpg); /* imagem de fundo */
+    --stroke-color: rgba(0, 0, 0, 0.5); /* cor da borda com transparência */
+    --surface-color: rgba(0, 0, 0, 0.1); /* cor de superfície com transparência */
+    --highlight-color: rgba(0, 0, 0, 0.1); /* cor de destaque com transparência */
+    --switch-bg-url: url(./assets/sun.svg); /* ícone do botão de troca de tema */
+}
+
+/* aplicando a variável de background no body */
+body {
+    background: var(--bg-url) no-repeat top center/cover; 
+}
+
+/* font geral */
+body * {
+     font-family: "Montserrat", sans-serif;
+     color: var(--text-color);
+}
+
+#container {
+    width: 360px;;
+    margin: 56px auto 0px;
+    padding: 0 5px;
+    padding: 0 24px;
+}
+
+/* centralizando tudo que estiver dentro do profile */
+ #profile {
+     text-align: center;
+     padding: 24px;
+}
+
+ #profile img {
+    width: 220px; /* largura da imagem */
+    height: 220px; /* altura da imagem */
+ }
+
+ #profile h1 {
+    font-size: 24px; /* tamanho da fonte */
+    line-height: 30px; /* espaçamento entre linhas */
+    margin-top: 16px;
+}
+
+ #profile p {
+    font-size: 13px;
+    line-height: 2px;
+    margin-top: 15px;
+    padding-bottom: 10px; /* espaçamento abaixo do parágrafo */
+ }
+
+ /* estilizando o botão de troca de tema */
+
+ #switch {
+    position: relative; /* necessário para o posicionamento absoluto do botão */
+    width: 64px;
+    margin: 4px auto;
+ }
+
+ #switch button{
+    width: 32px;
+    height: 32px;
+    background: #fff var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 50%; /* deixa o botão redondo */
+
+    position: absolute; /* posicionamento absoluto dentro do #switch */
+    top: 50%;
+    left: 0;
+    z-index: 1; /* garante que o botão fique acima do span */
+    transform: translateY(-50%) /* centraliza verticalmente o botão */;
+ }
+
+ .light #switch button {
+    right: 0;
+    left: initial; /* reseta a posição left para o tema claro */
+ }
+
+ #switch span{
+    display: block;
+    width: 64px;
+    height: 24px;
+    background: var(--surface-color); /* cor de fundo com transparência */
+    border: 1px solid var(--stroke-color); /* borda com transparência */
+    backdrop-filter: blur(4px); /* efeito de desfoque no fundo */
+    --webkit-backdrop-filter: blur(4px); /* suporte para Safari */
+    border-radius: 9999px; /* bordas arredondadas */
+ }
+
+ul {
+      list-style: none; /* remove os marcadores padrão da lista */
+      display: flex;
+      flex-direction: column; /* alinha os itens em coluna */
+      gap: 16px;
+      padding: 24px 0;
+}
+
+ul li a {
+    font-size: 14px;
+    display: flex;
+    align-items: center; /*elemento alinhado ao meio horinzontalmente*/
+    justify-content: center; /*elemento alinhando ao meio verticalmente*/
+    padding: 16px 24px;
+    background: var(--surface-color); /* cor de fundo com transparência */
+    border: 1px solid var(--stroke-color); /* borda com transparência */
+    border-radius: 8px;
+    backdrop-filter: blur(4px); /* efeito de desfoque no fundo */
+    text-decoration: none; /* remover sublinhado do link */
+    transition: background 0,5s; /* transição suave para o efeito hover */
+}
+
+
+ul li a:hover { /* efeito ao passar o mouse */
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--text-color);
+}
+
+#social-links {
+    display: flex;
+    justify-content: center; /* centraliza os ícones horizontalmente */
+    font-size: 30px;
+
+    padding: 15px 0;
+}
+
+#social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+
+    transition: background 0.2s;
+    border-radius: 50%;
+}
+
+#social-links a:hover{
+    background: var(--highlight-color);
+}
+
+footer {
+    padding: 15px 0;
+    text-align: center;
+    font-size: 11px;
+    color: var(--bg-url);
+}
