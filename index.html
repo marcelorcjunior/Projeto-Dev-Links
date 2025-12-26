@@ -1,70 +1,42 @@
 <!DOCTYPE html>
-<!-- Definindo o idioma da página como português do Brasil e o tema inicial como claro -->
 <html lang="pt-br" class="light">
 <head>
-
-    <!-- linkando a fonte Montserrat do Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-
-    <!-- linhas de metadados padrões dos arquivos html-->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Perfil Dev | Marcelo Rocha</title>
-
-    <!-- linkando o arquivo CSS externo -->
     <link rel="stylesheet" href="./style.css">
-
 </head>
-
 <body>
-
     <div id="container">
-
         <div id="profile">
             <img src="./assets/avatar.png" alt="Imagem de Marcelo Rocha, sorrindo, de camisa preta em um fundo branco."/>
             <h1>Marcelo Rocha | Dev</h1>
             <p>Desenvolvedor FullStack em formação.</p>
         </div>
-
-        <!-- Botão de alternância de tema claro/escuro -->
-        <div id="switch" onclick="toggleMode()"> <!-- chamando a função toggleMode() ao clicar -->
+        <div id="switch" onclick="toggleMode()">
             <button></button>
             <span></span>
         </div>
-
-        <!-- INFORMAÇÕES SOBRE LISTA NO HTML -->
-        <!-- cada item da lista é representado pela tag <li> -->
-        <!-- link com target _blank para abrir em nova aba -->
-        <!--tag <a> é uma tag de link -->
-
         <ul>
             <li><a href="#" target="_blank">Currículo digital</a></li>
         </ul>
-
-        <!-- Ícones sociais -->
         <div id="social-links">
             <a href="https://github.com/marcelorcjunior" target="_blank">
                 <ion-icon name="logo-github"></ion-icon>
             </a>
-            
             <a href="https://www.instagram.com/marcelorcjunior" target="_blank">
             <ion-icon name="logo-instagram"></ion-icon>
             </a>
-
             <a href="https://wa.me/5581998457691" target="_blank">
             <ion-icon name="logo-whatsapp"></ion-icon>
             </a>
-
             <a href="www.linkedin.com/in/marcelorcjunior" target="_blank">
             <ion-icon name="logo-linkedin"></ion-icon>
             </a>
         </div>
-
-
-        <!-- rodapé da página -->
         <footer>
             Desenvolvido por Marcelo Rocha
         </br>
@@ -72,14 +44,8 @@
         </footer>
 
     </div>
-    
-    
-    <!-- Importando a biblioteca de ícones Ionicons -->
     <script  type = "module"  src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js " > </script> 
     <script nomodule src = " https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js " >   </script>
-
-
-    <!-- linkando o arquivo JavaScript externo -->
     <script src="./script.js"></script>
 </body>
 </html>
